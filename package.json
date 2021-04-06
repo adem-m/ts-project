@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "ts-node index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/adem-m/ts-project/issues"
   },
-  "homepage": "https://github.com/adem-m/ts-project#readme"
+  "homepage": "https://github.com/adem-m/ts-project#readme",
+  "devDependencies": {
+    "typescript": "^4.2.3"
+  },
+  "dependencies": {
+    "ts-node": "^9.1.1"
+  }
 }
