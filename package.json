@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsc index.ts --outDir src/js && node index.js",
+    "start": "ts-node index.ts",
+    "build": "tsc index.ts --outDir dist",
     "test": "jest"
   },
   "repository": {

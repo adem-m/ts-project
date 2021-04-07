@@ -1,7 +1,5 @@
 import {Pokemon} from "../src/Pokemon";
-
-const pikachu = new Pokemon("pikachu", 100);
-const ninjask = new Pokemon("ninjask", 999);
+import {pikachu, ninjask, kicklee} from "./data";
 
 test("should be correctly named", () => {
     expect(pikachu.name).toBe("pikachu");
@@ -12,6 +10,16 @@ test("should get correct attacker", () => {
 });
 
 test("should get correct attacker when speed is equal", () => {
-    const kicklee = new Pokemon("kicklee", 100);
     expect(Pokemon.firstAttacker(pikachu, kicklee)).toBe(pikachu);
 });
+
+test("should lower opponent's hp", () => {
+    pikachu.attack(ninjask, 0);
+    expect(ninjask.hp).toBe(45);
+});
+
+test("should not go negative hp", () => {
+    pikachu.attack(ninjask, 1);
+    pikachu.attack(ninjask, 1);
+    expect(ninjask.hp).toBe(0);
+})
