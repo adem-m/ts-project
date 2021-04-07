@@ -17,12 +17,13 @@ export class Pokemon {
         return pokemon1.speed < pokemon2.speed ? pokemon2 : pokemon1;
     }
 
-    attack(opponent: Pokemon, moveId: number): void {
+    attack(opponent: Pokemon, moveId: number, random: number = Math.random()): void {
         if (moveId > this.moves.length) {
             return;
         }
+        const multiplier = random > 0.9 ? 2 : 1;
         const move = this.moves[moveId];
-        opponent.hp -= move.damage;
+        opponent.hp -= move.damage * multiplier;
         if (opponent.hp < 0) {
             opponent.hp = 0;
         }
