@@ -1,5 +1,11 @@
 import {Pokemon} from "./src/Pokemon";
 
-const pikachu = new Pokemon("pikachu", 100);
+const main = async () => {
+    const pikachu = await Pokemon.createPokemon('pikachu');
+    if (pikachu !== null) {
+        const speed = pikachu.getStat("speed");
+        console.log(speed);
+    }
+}
 
-console.log(pikachu);
+main();

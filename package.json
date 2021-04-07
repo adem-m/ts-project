@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsc index.ts --outDir src/js && node index.js",
+    "start": "ts-node index.ts",
     "test": "jest"
   },
   "repository": {
@@ -26,6 +26,7 @@
     "typescript": "^4.2.3"
   },
   "dependencies": {
+    "pokeapi-typescript": "^2.1.0",
     "ts-node": "^9.1.1"
   }
 }

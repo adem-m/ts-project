@@ -1,17 +1,15 @@
 import {Pokemon} from "../src/Pokemon";
-
-const pikachu = new Pokemon("pikachu", 100);
-const ninjask = new Pokemon("ninjask", 999);
+import {pikachu, ninjask, giratina} from "./data";
 
 test("should be correctly named", () => {
-    expect(pikachu.name).toBe("pikachu");
+    expect(pikachu.data.name).toBe("pikachu");
 });
 
 test("should get correct attacker", () => {
     expect(Pokemon.firstAttacker(pikachu, ninjask)).toBe(ninjask);
 });
 
-test("should get correct attacker when speed is equal", () => {
-    const kicklee = new Pokemon("kicklee", 100);
-    expect(Pokemon.firstAttacker(pikachu, kicklee)).toBe(pikachu);
+test("should get correct attacker when speed is equal", async () => {
+    expect(Pokemon.firstAttacker(pikachu, giratina)).toBe(pikachu);
 });
+
