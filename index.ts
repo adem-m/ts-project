@@ -1,5 +1,5 @@
 import {Pokemon} from "./src/Pokemon";
 
-const pokemon = new Pokemon("pikachu");
+const pikachu = new Pokemon("pikachu", 100);
 
-console.log(pokemon);
+console.log(pikachu);
