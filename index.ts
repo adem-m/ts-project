@@ -1,5 +1,6 @@
-import {Pokemon} from "./src/Pokemon";
+import {kicklee, pikachu} from "./test/data";
+import {Battle} from "./src/Battle";
 
-const pikachu = new Pokemon("pikachu", 100);
+const battle = new Battle(pikachu, kicklee);
 
-console.log(pikachu);
+battle.run();

@@ -1,4 +1,4 @@
-import {Move} from "./move";
+import {Move} from "./Move";
 
 export class Pokemon {
     name: string;
@@ -22,6 +22,9 @@ export class Pokemon {
             return;
         }
         const multiplier = random > 0.9 ? 2 : 1;
+        if(multiplier === 2){
+            console.log("Critical hit");
+        }
         const move = this.moves[moveId];
         opponent.hp -= move.damage * multiplier;
         if (opponent.hp < 0) {

@@ -1,5 +1,5 @@
 import {Pokemon} from "../src/Pokemon";
-import {Move} from "../src/move";
+import {Move} from "../src/Move";
 
 const basicAttack = new Move("tackle", 35);
 
